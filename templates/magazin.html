@@ -1,0 +1,140 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="ro">
+    <style>
+    body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: white; 
+}
+
+header {
+    background-color: #333;
+    color: white; 
+    padding: 20px;
+    text-align: center;
+}
+
+.logo {
+    width: 100px;
+    height: auto;
+}
+
+h1 {
+    margin-top: 0; 
+}
+
+.navbar {
+    background-color: #333;
+    overflow: hidden;
+    text-align: center;
+}
+
+.navbar a {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    float:left;
+}
+
+.product-image {
+    width: 50%; 
+    border-radius: 10px 0 0 10px; 
+}
+
+.product {
+    display: flex;
+    margin-top: 30px; 
+    background-color: white;
+    border-radius: 10px;
+    align-items: flex-start;
+
+}
+
+.content {
+    padding: 20px; 
+    flex: 1; 
+    margin-right: 30px;
+    width: 50px;
+}
+
+h2 {
+    color: #333;
+}
+
+.button {
+    display: inline-block;
+    background-color: #333;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease; 
+}
+
+.button:hover {
+    background-color: #555;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline; 
+}
+
+    </style>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harley Davidson Shop</title>
+</head>
+<body>
+    <header>
+        <img src="{% static 'file.png'%}" alt="Harley Davidson Logo" class="logo">
+        <h1>Magazinul nostru Harley Davidson</h1>
+    </header>
+    <nav class="navbar">
+        <a href="/">Pagina Principala</a>
+        <a href="#bottom">Contact</a>
+    </nav>
+    <main>
+        <section class="product">
+         {%for motocicleta in motociclete%}
+            <div class="content">
+                <img src="{{motocicleta.image.url}}" alt="Motocicletă 4" class="product-image">
+                <h2>{{motocicleta.tipe_of_motorcycle}}</h2>
+                <h1>{{motocicleta.model}}</h1>
+                <p>{{motocicleta.description}} <br> Modelul are o capacitate cilindrica de {{motocicleta.engine_capacity}} si o putere de {{motocicleta.horsepower}}</p>
+                <h1>{{motocicleta.value}} $</h1>
+                <a href="magazin/{{motocicleta.model}}" class="button">Cumpără acum</a>
+            </div>
+            {%endfor%}
+        </section>
+
+    </main>
+    <div id="bottom"> 
+        <footer>
+        <h2>Contact</h2>
+            <p>Pentru orice întrebări sau solicitări, nu ezitați să ne contactați:</p>
+            <p>Telefon: 123-456-789</p>
+            <p>Email: sanunecontactezi@yahoo.com</p>
+        </footer>
+    </div>
+</body>
+</html>

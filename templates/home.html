@@ -1,0 +1,139 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="ro">
+    <style>
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .container {
+            background-color: white; 
+            padding: 20px; 
+            width: 50%; 
+            box-sizing: border-box; 
+            float: left; 
+            font-size: 25px;}
+        
+        header {
+            background-color: #333; 
+            color: white; 
+            padding: 20px;
+            text-align: center;
+        }
+        img.logo{
+            padding: 20px; 
+            width: 45%; 
+            box-sizing: border-box; 
+            float: right; 
+        }
+        .logo {
+            width: 100px; 
+            height: auto; 
+            float: right;
+            box-sizing: border-box;
+        }
+        
+        .navbar {
+            background-color: #333; 
+            overflow: hidden;
+        }
+        
+        .navbar a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+        
+        .navbar a:hover {
+            background-color: #ddd; 
+            color: black; 
+        }
+        
+        .features {
+            display: flex;
+            flex-wrap: wrap; 
+            margin-top: 20px;
+            width: 100%; 
+        }
+        
+        
+        .feature {
+            text-align: center;
+            padding: 20px;
+        }
+        
+        .feature img {
+            width: 80px;
+            height: auto; 
+        }
+        
+        footer {
+            background-color: #333; 
+            color: white; 
+            padding: 20px;
+            text-align: center;
+        }
+        
+        footer a {
+            color: white;
+            text-decoration: none;
+        }
+        
+        footer a:hover {
+            text-decoration: underline; 
+        }
+        
+            </style>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bine ai venit la Tony's Shop</title>
+    </head>
+<body>
+    <header>
+        <link rel="stylesheet" href="{% static 'home.css'%}">
+        <nav class="navbar">
+            <a href="magazin">Magazin</a>
+            <a href="#bottom">Contact</a>
+        </nav>
+        <h1>Bine ai venit la Tony's Shop <br> Comerciant asociat cu Harley-Davidson Motor Company</h1>
+    </header>
+    <div class="container">
+        <h1>O scurta istorie</h1>
+        <p>Harley-Davidson este un producator american de motociclete cu o bogată istorie şi tradiţie culturală. Fondată în 1903 în Milwaukee, WI, Harley tocmai a sărbătorit peste  100 de ani cu o serie de evenimente, si sute de mii de motociclişti stransi pe malul lacului Michigan. În 1929, existau 241 producatori de motociclete din SUA. După criza, numai doi au rămas: Harley şi Indian. Prin 1953, indian a ieşit din afaceri, lasand Harley-Davidson ca singurul producător american de motociclete. Dificultăţile financiare în anii 1970 a dus la necesitatea ca societatea-mamă, AMF sa scoata firma la vanzare. Fără a avea cumpărător, un grup de manageri Harley au cumparat compania şi l-au salvat-o schimband profilul, sub acelasi brand au inceput sa vanda produse cum ar fi îmbrăcăminte şi accesorii auxiliare motociclistilor. Acum, o societate deţinută public, Harley a marcat o crestere de doua cifre pentru optsprezece ani consecutiv . Harley sa transformat într-o companie de marketing puternic, cu un accent puternic pe imaginea şi calitatea produselor.Harley Davidson a devenit exemplul clasic al reuşitei în ceea ce priveşte crearea unei comunităţi centrate pe brand.Harley Owners Group (H.O.G.) a fost înfiinţat de Harley Davidson Motor Company în 1983 şi s-a născut din dorinţa mândrilor posesori ai unui Harley de a se întâlni şi de a-şi împărtăşi pasiunea pentru libertate. H.O.G. a devenit foarte repede cel mai mare club moto din lume, care are organizaţii în toată lumea, inclusiv în România, dar se consideră mai mult decât o organizaţie a motocicliştilor. E vorba de peste un milion de oameni, din lumea întreagă, uniţi de acelaşi vis: Harley Davidson este legătura dintre pasiune, prietenie, bună dispoziţie şi respect.Harley Davidson a dezvoltat pentru membrii comunităţii simboluri specifice, care îi ajută să se identifice unii pe alţii şi să se diferenţieze de ceilalţi. Oricine îi poate recunoaşte după îmbrăcămintea specifică..</p>
+
+    </div>
+    <img src="{% static '1.jpg'%}" alt="Harley Davidson Logo" class="logo">
+
+    <div class="features">
+        <div class="feature">
+            <img src="{%static 'transport.png'%}" alt="Livrare Gratuită">
+            <h3>Livrare Gratuită</h3>
+            <p>Livrăm gratuit în toată țara pentru toate comenzile de peste 500 lei.</p>
+        </div>
+        <div class="feature">
+            <img src="{%static '24.png'%}" alt="Suport 24/7">
+            <h3>Suport 24/7</h3>
+            <p>Oferim asistență non-stop prin chat, telefon sau e-mail pentru toate nevoile tale.</p>
+        </div>
+        <div class="feature">
+            <img src="{%static 'garantie.png'%}" alt="Garantie">
+            <h3>Garantie</h3>
+            <p>Beneficiezi de garanție extinsă și suport post-vânzare pentru toate produsele noastre.</p>
+        </div>
+    </div>
+    <footer>
+        <h2>Contact</h2>
+            <p>Pentru orice întrebări sau solicitări, nu ezitați să ne contactați:</p>
+            <p>Telefon: 123-456-789</p>
+            <p>Email: sanunecontactezi@yahoo.com</p>
+    </footer>
+    <div id="bottom"></div>
+</body>
+</html>

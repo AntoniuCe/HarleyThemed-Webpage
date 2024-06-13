@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formular de Comandă Motociclete Online</title>
+    <Style>
+
+    </Style>
+</head>
+<body>
+    <h1 style="width: 20vw;">Formular de Comandă Motociclete Online</h1>
+    <form action="" method="post" class="form">
+       
+        {%csrf_token%}
+
+       {{order.as_p}}
+
+       <input type="submit" value="Submit" class="btn btn-secondary">
+    </form>
+</body>
+</html>
